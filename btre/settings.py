@@ -146,3 +146,10 @@ MESSAGE_TAGS = {
     messages.ERROR: 'danger'
 }
 
+# 為了遠端 Deploy，遠端會多放一個 local_settings 檔案
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass
+
